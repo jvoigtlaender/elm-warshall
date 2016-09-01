@@ -1,4 +1,4 @@
-module Warshall (warshall) where
+module Warshall exposing (warshall)
 
 {-| The Warshall Algorithm, on type `Matrix` from the
 [`eeue56/elm-flat-matrix` package](http://package.elm-lang.org/packages/eeue56/elm-flat-matrix/latest).

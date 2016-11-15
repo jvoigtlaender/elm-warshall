@@ -7,7 +7,6 @@ module Warshall exposing (warshall)
 -}
 
 import Matrix exposing (Matrix)
-import Maybe
 
 
 connectedIn : Matrix Bool -> Int -> Int -> Bool
@@ -37,4 +36,4 @@ warshall n matrix =
         step k matrix =
             Matrix.indexedMap (\i j t -> t || connectedIn matrix i k && connectedIn matrix k j) matrix
     in
-        List.foldl step matrix [0..n - 1]
+        List.foldl step matrix (List.range 0 (n - 1))
